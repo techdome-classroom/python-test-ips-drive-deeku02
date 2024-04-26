@@ -1,15 +1,9 @@
-def smallest_missing_positive_integer(nums: List[int]) -> int:
-    """
-    Implement the function smallest_missing_positive_integer 
-    using the provided smallest_missing_positive_integer function 
-    to find the smallest missing positive integer in the given list.
-
-    """
-    pass
-
-
-
-
+def smallest_missing_positive_integer(numbers):
+    smallest_missing = 1
+    for num in numbers:
+        if num > 0 and num <= smallest_missing:
+            smallest_missing = num + 1
+    return smallest_missing
 
 
 
